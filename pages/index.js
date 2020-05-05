@@ -15,7 +15,7 @@ export default function Home() {
       </main>
 
       <footer>
-        Hello.
+        Hello 2020.
       </footer>
 
       <style jsx>{`
