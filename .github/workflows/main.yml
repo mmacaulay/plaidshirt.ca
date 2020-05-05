@@ -27,4 +27,4 @@ jobs:
         azcliversion: 2.5.1
         inlineScript: |
           az storage copy --source-local-path $GITHUB_WORKSPACE/out \
-          -d https://plaidshirtca.blob.core.windows.net/$web --recursive
+          -d https://plaidshirtca.blob.core.windows.net/$web/ --recursive
