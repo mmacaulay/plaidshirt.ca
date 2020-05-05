@@ -22,9 +22,9 @@ jobs:
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
     - name: Upload build files to Azure storage
-        uses: azure/CLI@v1
-        with:
-          azcliversion: 2.5.1
-          inlineScript: |
-            az storage copy --source-local-path $GITHUB_WORKSPACE/out \
-            -d https://plaidshirtca.blob.core.windows.net/$web --recursive
+      uses: azure/CLI@v1
+      with:
+        azcliversion: 2.5.1
+        inlineScript: |
+          az storage copy --source-local-path $GITHUB_WORKSPACE/out \
+          -d https://plaidshirtca.blob.core.windows.net/$web --recursive
