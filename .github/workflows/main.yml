@@ -17,6 +17,9 @@ jobs:
       run: yarn install
     - name: Build application
       run: yarn build
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
     - name: Azure login
       uses: azure/login@v1
       with:
@@ -26,5 +29,6 @@ jobs:
       with:
         azcliversion: 2.5.1
         inlineScript: |
-          az storage copy --source-local-path $GITHUB_WORKSPACE/out \
-          -d https://plaidshirtca.blob.core.windows.net/$web/ --recursive
+          az storage copy \
+          -s "$GITHUB_WORKSPACE/out/*" \
+          -d https://plaidshirtca.blob.core.windows.net/\$web --recursive
