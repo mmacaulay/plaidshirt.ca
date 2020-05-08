@@ -8,9 +8,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <header>
+      </header>
+
       <main>
         <h1 className="title">
           Plaid Shirt
+          <img className="shirt" src="shirt.svg" alt="Plaid Shirt" />
         </h1>
       </main>
 
@@ -21,11 +25,18 @@ export default function Home() {
       <style jsx>{`
         .container {
           min-height: 100vh;
-          padding: 0 0.5rem;
+          padding: 0;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
+        }
+
+        header {
+          width: 100%;
+          height: 1rem;
+          background-image: url('tartan.jpg');
+          display: flex;
         }
 
         main {
@@ -35,6 +46,12 @@ export default function Home() {
           flex-direction: column;
           justify-content: center;
           align-items: center;
+        }
+
+        .shirt {
+          width: 4rem;
+          height: 4rem;
+          margin-left: 1rem;
         }
 
         footer {
