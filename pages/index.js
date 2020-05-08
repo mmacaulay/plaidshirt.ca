@@ -8,8 +8,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header>
-      </header>
+      <header></header>
 
       <main>
         <h1 className="title">
