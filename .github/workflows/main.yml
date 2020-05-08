@@ -42,4 +42,4 @@ jobs:
         inlineScript: |
           az storage copy \
           -s "build/*" \
-          -d https://plaidshirtca.blob.core.windows.net/\$web --recursive
+          -d ${{ secrets.AZURE_STORAGE }} --recursive
