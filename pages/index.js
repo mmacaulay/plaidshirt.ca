@@ -5,7 +5,7 @@ export default function Home() {
     <div className="container">
       <Head>
         <title>Plaid Shirt</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/plaidshirt.ico" />
       </Head>
 
       <header></header>
@@ -13,7 +13,7 @@ export default function Home() {
       <main>
         <h1 className="title">
           Plaid Shirt
-          <img className="shirt" src="shirt.svg" alt="Plaid Shirt" />
+          <img className="shirt" src="plaidshirt.svg" alt="Plaid Shirt" />
         </h1>
       </main>
 
