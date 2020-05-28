@@ -1,10 +1,11 @@
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
 import style from './index.module.css'
 import plaidshirtSvg from './plaidshirt.svg'
 
-export default function Home() {
-  const date = new Date().getFullYear()
+const DynamicFooter = dynamic(() => import('./footer'))
 
+export default function Home() {
   return (
     <div className={style.container}>
       <Head>
@@ -21,9 +22,7 @@ export default function Home() {
         </h1>
       </main>
 
-      <footer>
-        Hello {date}.
-      </footer>
+      <DynamicFooter />
     </div>
   )
 }
