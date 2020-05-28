@@ -11,6 +11,7 @@ export default function Home() {
       <Head>
         <title>Plaid Shirt</title>
         <link rel="icon" href={PlaidShirtSVG} />
+        <meta name="description" content="A website about plaid shirts." />
       </Head>
 
       <div className={style.container}>
